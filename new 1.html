@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Example</title>
+  <style>
+    /* Default body styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container styling */
+    .container {
+      background-color: #f2f2f2;
+      width: 100%;
+      padding: 20px; /* default padding */
+      display: flex;
+      flex-direction: row; /* default flex layout */
+      gap: 20px;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 200px;
+      background-color: #ddd;
+      padding: 15px;
+    }
+
+    /* Heading styling */
+    h1 {
+      font-size: 24px; /* default font size */
+      margin: 0 0 10px;
+    }
+
+    /* Paragraph */
+    p {
+      color: #333; /* default */
+    }
+
+    /* ========= MEDIA QUERIES ========= */
+
+    /* 1. Body bg lightblue when <= 600px */
+    @media (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+
+    /* 2. Container padding rules */
+    @media (max-width: 767px) {
+      .container {
+        padding: 10px;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+    }
+
+    /* 3. Heading font-size responsive */
+    @media (max-width: 599px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    /* 4. Hide sidebar when printing */
+    @media print {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    /* 5. Text color for <500px */
+    @media (max-width: 499px) {
+      p {
+        color: red;
+      }
+    }
+
+    /* 6. Flex-direction column on small screens */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>Responsive Design Demo</h1>
+      <p>This is a paragraph of text inside the container. Resize the screen to see changes.</p>
+    </div>
+    <div class="sidebar">
+      <p>Sidebar content</p>
+    </div>
+  </div>
+</body>
+</html>
