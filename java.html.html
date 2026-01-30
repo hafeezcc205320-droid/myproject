@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="username">Username (4-12 characters):</label><br />
+        <input type="text" id="username" name="username" placeholder="Enter username" /><br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        if (username.length < 4 || username.length > 12) {
+            alert("Username must be between 4 and 12 characters.");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>
